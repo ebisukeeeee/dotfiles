@@ -1,0 +1,10 @@
+# 直前のコマンドの重複を削除
+setopt hist_ignore_dups
+# 同じコマンドをヒストリに残さない
+setopt hist_ignore_all_dups
+# 同時に起動したzshの間でヒストリを共有
+setopt share_history
+# コマンドのスペルを訂正
+setopt correct
+# ビープ音を鳴らさない
+setopt no_beep
