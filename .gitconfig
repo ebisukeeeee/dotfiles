@@ -1,16 +1,10 @@
 [core]
-	excludesfile = /Users/ryoichi/.gitignore_global
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+  excludesfile = /Users/ryoichi/.gitignore_global
 [user]
-	name = fr
-	email = ryoichi.fujio@gmail.com
+  name = fr
+  email = ryoichi.fujio@gmail.com
 [commit]
-	template = /Users/ryoichi/.stCommitMsg
+  template = /Users/ryoichi/.stCommitMsg
 [alias]
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   graph = log --graph --all --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
@@ -19,4 +13,11 @@
   c = !git checkout
   g = !git graph
   b = !git branch
-  
+  st = status
+  f = fetch --prune
+  co = checkout
+  b = branch
+  d-merged = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+[core]
+  editor = vim -c \"set fenc=utf-8\"
+  excludesfile = /Users/ryoichi.fujio/.gitignore_global
